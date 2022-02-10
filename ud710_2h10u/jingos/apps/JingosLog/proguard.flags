@@ -1,0 +1,5 @@
+-keep class com.jingos.log.MyApp
+-keep class com.jingos.log.Constants
+-keep class com.jingos.log.MainActivity
+-keep class com.jingos.log.AppUtil
+-keep class com.jingos.log.Location

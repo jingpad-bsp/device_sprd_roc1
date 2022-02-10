@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Whether screen_pinning_settings should be shown or not. -->
+    <bool name="config_show_screen_pinning_settings">false</bool>
+</resources>

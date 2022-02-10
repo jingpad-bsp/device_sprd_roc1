@@ -1,0 +1,88 @@
+type sprd_runtime_app, domain;
+app_domain(sprd_runtime_app)
+
+set_prop(sprd_runtime_app, ylog_prop)
+typeattribute sprd_runtime_app mlstrustedsubject;
+
+allow sprd_runtime_app vendor_file:file {r_file_perms execute};
+allow sprd_runtime_app prod_file:dir { search getattr setattr write add_name read open remove_name };
+allow sprd_runtime_app prod_file:{file lnk_file} { open create_file_perms write read setattr getattr };
+allow sprd_runtime_app sysfs_leds:dir { search };
+allow sprd_runtime_app sysfs:file { getattr open read };
+allow sprd_runtime_app sysfs:dir { search };
+allow sprd_runtime_app proc:file { getattr open read };
+#system service
+allow sprd_runtime_app activity_service:service_manager find;
+allow sprd_runtime_app connectivity_service:service_manager find;
+allow sprd_runtime_app display_service:service_manager find;
+allow sprd_runtime_app network_management_service:service_manager find;
+allow sprd_runtime_app accessibility_service:service_manager find;
+allow sprd_runtime_app user_service:service_manager find;
+allow sprd_runtime_app input_method_service:service_manager find;
+allow sprd_runtime_app notification_service:service_manager find;
+allow sprd_runtime_app graphicsstats_service:service_manager find;
+allow sprd_runtime_app drmserver_service:service_manager find;
+allow sprd_runtime_app radio_service:service_manager find;
+allow sprd_runtime_app app_api_service:service_manager find;
+allow sprd_runtime_app permission_service:service_manager find;
+allow sprd_runtime_app power_service:service_manager find;
+allow sprd_runtime_app appops_service:service_manager find;
+allow sprd_runtime_app batterystats_service:service_manager find;
+allow sprd_runtime_app surfaceflinger_service:service_manager find;
+allow sprd_runtime_app audio_service:service_manager find;
+allow sprd_runtime_app content_service:service_manager { find };
+allow sprd_runtime_app mount_service:service_manager { find };
+allow sprd_runtime_app bluetooth_manager_service:service_manager { find };
+allow sprd_runtime_app textservices_service:service_manager { find };
+allow sprd_runtime_app wifi_service:service_manager { find };
+allow sprd_runtime_app hal_extRadio_hwservice:hwservice_manager { find };
+allow sprd_runtime_app cameraserver_service:service_manager { find };
+allow sprd_runtime_app audioserver_service:service_manager { find };
+allow sprd_runtime_app mediaserver_service:service_manager { find };
+allow sprd_runtime_app mediaextractor_service:service_manager { find };
+#other
+allow sprd_runtime_app sprd_runtime_app:netlink_kobject_uevent_socket { create setopt bind read };
+allow sprd_runtime_app slogmodem:unix_stream_socket { connectto read write };
+allow sprd_runtime_app wcnd:unix_stream_socket { connectto read write };
+allow sprd_runtime_app phasecheckserver:unix_stream_socket { connectto };
+allow sprd_runtime_app fm_device:chr_file { read write open ioctl };
+allow sprd_runtime_app fingerprintd_data_file:dir { search open };
+allow sprd_runtime_app fingerprintd_data_file:file { read write open getattr };
+allow sprd_runtime_app block_device:dir { search open };
+allow sprd_runtime_app system_data_file:dir { read open add_name};
+allow sprd_runtime_app gnss_file:dir { create search add_name open read write remove_name };
+allow sprd_runtime_app gnss_file:file { read write open create getattr setattr append unlink };
+allow sprd_runtime_app gpsd:unix_stream_socket { connectto sendto getattr read write };
+allow sprd_runtime_app rild:binder { call };
+allow sprd_runtime_app system_prop:property_service { set };
+allow sprd_runtime_app rild:unix_stream_socket { connectto };
+allow sprd_runtime_app binder_device:chr_file { read write open ioctl };
+allow sprd_runtime_app system_data_file:dir { getattr };
+allow sprd_runtime_app mnt_expand_file:dir { getattr };
+allow sprd_runtime_app system_data_file:lnk_file { getattr read };
+allow sprd_runtime_app app_data_file:dir { getattr search };
+allow sprd_runtime_app app_data_file:file { read write open};
+allow sprd_runtime_app user_profile_data_file:file { getattr read open };
+allow sprd_runtime_app zygote:fd { use };
+allow sprd_runtime_app sprd_runtime_app:binder { call };
+allow sprd_runtime_app sprd_runtime_app:process { execmem };
+allow sprd_runtime_app ashmem_device:chr_file  { execute };
+allow sprd_runtime_app tmpfs:file  { read execute };
+allow sprd_runtime_app adbd:unix_stream_socket { connectto };
+allow sprd_runtime_app servicemanager:service_manager { list };
+allow sprd_runtime_app sysfs_sensor:file { open getattr write };
+allow sprd_runtime_app vendor_product_prop:file { read };
+allow sprd_runtime_app vendor_camera_prop:file{ read };
+allow sprd_runtime_app proc_version:file { open read getattr };
+
+#androidP update
+set_prop(sprd_runtime_app, vendor_sys_prop)
+set_prop(sprd_runtime_app, vendor_radio_prop)
+set_prop(sprd_runtime_app, vendor_product_prop)
+set_prop(sprd_runtime_app, vendor_camera_prop)
+allow sprd_runtime_app sysfs_power:dir { search };
+allow sprd_runtime_app sysfs_power:file { read open getattr};
+#add other context te
+allow system_server sprd_runtime_app:file { write };
+allow sprd_runtime_app ctl_start_prop:property_service { set };
+allow sprd_runtime_app vendor_default_prop:file { open read getattr };

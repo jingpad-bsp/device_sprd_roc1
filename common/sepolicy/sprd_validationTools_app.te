@@ -1,0 +1,6 @@
+#for et200_spi
+allow sprd_validationtools_app encryptionChip_device:chr_file { read write open ioctl };
+allow sprd_validationtools_app sysfs_sensor:file { read };
+
+allow sprd_validationtools_app sysfs_tp_rawdata_test:file { getattr open read write };
+

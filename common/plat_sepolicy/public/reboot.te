@@ -1,0 +1,7 @@
+type reboot, domain;
+type reboot_exec, exec_type,file_type,system_file_type;
+
+allow reboot kernel:fd { use };
+allow reboot property_socket:sock_file { write };
+allow reboot init:unix_stream_socket { connectto };
+allow reboot powerctl_prop:property_service { set };

@@ -1,0 +1,50 @@
+/dev/block/sdb                                                                /spl                ufs    defaults    defaults
+/dev/block/sdc                                                                /spl_bk             ufs    defaults    defaults
+/dev/block/by-name/uboot                 /uboot              ufs    defaults    defaults
+/dev/block/by-name/uboot_bak             /uboot_bak          ufs    defaults    defaults
+/dev/block/by-name/sml                   /sml                ufs    defaults    defaults
+/dev/block/by-name/sml_bak               /sml_bak            ufs    defaults    defaults
+/dev/block/by-name/trustos               /tos                ufs    defaults    defaults
+/dev/block/by-name/trustos_bak           /tos_bak            ufs    defaults    defaults
+/dev/block/by-name/teecfg                /teecfg             ufs    defaults    defaults
+/dev/block/by-name/teecfg_bak            /teecfg_bak         ufs    defaults    defaults
+/dev/block/by-name/vbmeta                /vbmeta             ufs    defaults    defaults
+/dev/block/by-name/vbmeta_bak            /vbmeta_bak         ufs    defaults    defaults
+/dev/block/by-name/vbmeta_system         /vbmeta_system      ufs    defaults    defaults
+/dev/block/by-name/vbmeta_vendor         /vbmeta_vendor      ufs    defaults    defaults
+/dev/block/by-name/dtbo                  /dtbo               ufs    defaults    defaults
+
+/dev/block/by-name/nr_spl                /nrspl              ufs    defaults    defaults
+/dev/block/by-name/nr_uboot              /nruboot            ufs    defaults    defaults
+/dev/block/by-name/nr_sml                /nrsml              ufs    defaults    defaults
+/dev/block/by-name/nr_boot               /nrboot             ufs    defaults    defaults
+
+/dev/block/by-name/nr_modem              /nrmodem            ufs    defaults    defaults
+/dev/block/by-name/nr_nrdsp1             /nrdsp1             ufs    defaults    defaults
+/dev/block/by-name/nr_nrdsp2             /nrdsp2             ufs    defaults    defaults
+/dev/block/by-name/nr_agdsp              /nragdsp            ufs    defaults    defaults
+/dev/block/by-name/nr_nrphy              /nrphy              ufs    defaults    defaults
+/dev/block/by-name/nr_v3phy              /nrv3phy            ufs    defaults    defaults
+/dev/block/by-name/nr_pmsys              /nrpmsys            ufs    defaults    defaults
+/dev/block/by-name/nr_fixnv1             /nrfixnv1           ufs    defaults    defaults
+/dev/block/by-name/nr_fixnv2             /nrfixnv2           ufs    defaults    defaults
+/dev/block/by-name/nr_deltanv            /nrdeltanv          ufs    defaults    defaults
+/dev/block/by-name/l_agdsp               /lteagdsp           ufs    defaults    defaults
+/dev/block/by-name/l_pmsys               /ltepmsys           ufs    defaults    defaults
+/dev/block/by-name/wcnmodem              /wcnmodem           ufs    defaults    defaults
+/dev/block/by-name/gnssmodem             /gnssmodem          ufs    defaults    defaults
+/dev/block/by-name/pm_sys                /pmsys              ufs    defaults    defaults
+
+/dev/block/by-name/misc                  /misc               ufs    defaults    defaults
+/dev/block/by-name/boot                  /boot               ufs    defaults    defaults
+/dev/block/by-name/recovery              /recovery           ufs    defaults    defaults
+/dev/block/by-name/persist               /persist            ufs    defaults    defaults
+/dev/block/by-name/logo                  /logo               ufs    defaults    defaults
+/dev/block/by-name/fbootlogo             /fbootlogo          ufs    defaults    defaults
+
+/dev/block/by-name/system                /system_root        ext4    ro,barrier=1    wait
+/dev/block/by-name/vendor                /vendor             ext4    ro,barrier=1    wait
+/dev/block/by-name/cache                 /cache              ext4    noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc    wait,check
+/dev/block/by-name/prodnv                /mnt/vendor         ext4    noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc     wait,check
+
+/dev/block/mmcblk1p1                     /storage/sdcard0    vfat    defaults    defaults

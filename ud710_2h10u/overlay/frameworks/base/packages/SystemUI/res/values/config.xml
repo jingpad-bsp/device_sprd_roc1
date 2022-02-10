@@ -1,0 +1,8 @@
+<resources>
+    <string name="quick_settings_tiles_default" translatable="false">
+       wifi,bt,nr,cell,airplane,dnd,location,rotation,hotspot,battery,saver,inversion,dark,cast,flashlight,night,fullscreenshot,regionscreenshot,longscreenshot,screenrecord
+    </string>
+    <string name="quick_settings_tiles_stock" translatable="false">
+       wifi,bt,nr,cell,airplane,dnd,location,rotation,hotspot,battery,saver,inversion,dark,cast,flashlight,night,fullscreenshot,regionscreenshot,longscreenshot,screenrecord
+    </string>
+</resources>

@@ -1,0 +1,19 @@
+allow dumpstate vold:binder { call };
+allow dumpstate prod_file:dir {getattr search };
+allow dumpstate debugfs:dir {read open };
+allow dumpstate debugfs:file {read open };
+allow dumpstate sysfs_stat:file {read open getattr};
+allow dumpstate debugfs_binder:file {read open};
+allow dumpstate debugfs_mmc:dir {search};
+allow dumpstate mnt_media_rw_file:dir { getattr };
+allow dumpstate mnt_expand_file:dir { search };
+
+allow dumpstate proc_loadavg:file {open read };
+allow dumpstate proc_buddyinfo:file {open read };
+allow dumpstate proc_diskstats:file {open read };
+allow dumpstate proc_swaps:file {open read };
+allow dumpstate debug_prop:property_service {set};
+allow dumpstate mnt_media_rw_file:dir {search create read write add_name getattr};
+allow dumpstate mnt_media_rw_file:file {create open getattr write};
+allow dumpstate vfat:dir {search open read add_name write};
+allow dumpstate vfat:file {create open write read getattr setattr unlink append };

@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="qs_panel_width">@dimen/jl_qs_panel_width_land</dimen>
+    <dimen name="notification_panel_width">@dimen/jl_qs_panel_width_land</dimen>
+</resources>

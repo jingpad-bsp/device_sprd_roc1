@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_marginTop="@dimen/jing_title_margin_top"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/jing_dimen_sp_title"
+        android:layout_height="wrap_content"
+        android:text="@string/jing_welcome"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/jing_iv_pic"
+        android:layout_width="404dp"
+        android:layout_height="399dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/jing_pic_001" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/jing_name_margin_bottom_to_parent"
+        android:textSize="@dimen/jing_dimen_sp_name"
+        android:text="@string/jing_page1_name"/>
+</RelativeLayout>

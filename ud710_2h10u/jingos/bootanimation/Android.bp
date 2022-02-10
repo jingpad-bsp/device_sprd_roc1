@@ -1,0 +1,35 @@
+apex_key {
+    name: "com.android.bootanimation.key",
+    public_key: "com.android.bootanimation.avbpubkey",
+    private_key: "com.android.bootanimation.pem",
+}
+
+apex {
+    name: "bootanimation.jingos",
+    manifest: "apex_manifest.json",
+    prebuilts: ["bootanimation.zip"],
+    file_contexts: "bootanimation",
+    key: "com.android.bootanimation.key",
+    certificate: "platform",
+}
+
+apex {
+    name: "bootanimation.lattice",
+    manifest: "apex_manifest.json",
+    prebuilts: ["bootanimation.lattice.zip"],
+    file_contexts: "bootanimation",
+    key: "com.android.bootanimation.key",
+    certificate: "platform",
+}
+
+prebuilt_etc {
+    name: "bootanimation.lattice.zip",
+    src: "bootanimation_lattice.zip",
+    filename: "bootanimation.zip",
+}
+
+prebuilt_etc {
+    name: "bootanimation.zip",
+    src: "bootanimation.zip",
+    filename: "bootanimation.zip",
+}

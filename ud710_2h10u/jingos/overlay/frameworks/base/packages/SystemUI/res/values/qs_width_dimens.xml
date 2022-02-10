@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="jl_qs_panel_width">1100px</dimen>
+    <dimen name="jl_qs_panel_width_land">1332px</dimen>
+
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_marginTop="@dimen/jing_title_margin_top"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/jing_dimen_sp_title"
+        android:layout_height="wrap_content"
+        android:text="@string/jing_welcome"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/jing_iv_pic"
+        android:layout_width="478dp"
+        android:layout_height="407.5dp"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="-10dp"
+        android:src="@drawable/jing_pic_003" />
+    <TextView
+        android:id="@+id/jing_tv_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/jing_tv_note_desc"
+        android:layout_marginBottom="@dimen/jing_name_margin_bottom"
+        android:textSize="@dimen/jing_dimen_sp_name"
+        android:text="@string/jing_page3_name"/>
+    <TextView
+        android:id="@+id/jing_tv_note_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/jing_desc_margin_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/jing_dimen_sp_desc"
+        android:text="@string/jing_page3_desc"/>
+</RelativeLayout>

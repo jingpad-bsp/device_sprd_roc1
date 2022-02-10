@@ -1,0 +1,2 @@
+on boot
+	write /proc/sys/kernel/poweroff_cmd "/system/bin/reboot -p"

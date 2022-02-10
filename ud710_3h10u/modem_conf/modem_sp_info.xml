@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modem_info>
+	<product val="roc1"/>
+	<modem_name val="sp"/>
+	<partion_cnt val="2"/>
+	<ioctl_path val="dev/pmsys"/>
+	<src_path val="/dev/block/by-name/"/>
+	<all_range base="0x00800000" size="0x40000"/>
+	<!--dst_path val="/proc/pmic/"/-->
+	<!-- special: bit0 sec,  bit1 nv, bit2 boot iram, bit3 cmdline;
+	     miniap: bit4 spl,  bit5 sml, bit6 uboot, bit7 boot;
+	     modem: bit8 modem head, bit9 modem, bit10 mode dsp, bit11 other modem
+	     pmsys:  bit12 pm, bit13 pm cali
+	     audio:  bit16 adsp
+	     bit 31 clear -->
+	<partion_item>
+		<partition00 base="0x00800000" size="0x3b000"  name="pmsys"    src_file="l_pmsys"        dst_file="pmsys"    flag="0x00001001"/>
+		<partition01 base="0x0083b000" size="0x05000"  name="cali_lib"  src_file="/vendor/firmware/EXEC_CALIBRATE_MAG_IMAGE"      dst_file="cali_lib"  flag="0x8002000"/>
+	</partion_item>
+</modem_info>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modem_info>
+	<product val="orca"/>
+	<modem_name val="dp"/>
+	<partion_cnt val="1"/>
+	<ioctl_path val="dev/dpsys"/>
+	<src_path val="/dev/block/platform/soc/soc:ap-apb/71400000.sdio/by-name/"/>
+	<all_range base="0x0000b000" size="0xdc00"/>
+	<!--dst_path val="/proc/pmic/"/-->
+	<!-- special: bit0 sec,  bit1 nv, bit2 boot iram, bit3 cmdline;
+	     miniap: bit4 spl,  bit5 sml, bit6 uboot, bit7 boot;
+	     modem: bit8 modem head, bit9 modem, bit10 mode dsp, bit11 agdsp
+	     syspm: bit12 pm, bit13 cali_data
+	     bit 31 clear -->
+	<partion_item>
+		<partition00 base="0x0000b000" size="0xdc00"  name="dpsys"    src_file="nr_pmsys"        dst_file="dpsys"    flag="0x00001001"/>
+	</partion_item>
+</modem_info>

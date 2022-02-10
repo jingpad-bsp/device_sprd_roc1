@@ -1,0 +1,87 @@
+on cali
+    mount_all /vendor/etc/fstab.cali
+    mount tmpfs tmpfs /data mode=0777
+
+    trigger load_persist_props_action
+    setprop sys.usb.configfs 1
+
+    trigger cali-fs
+    trigger cali-start
+
+on cali-fs
+    chmod 666 /sys/module/firmware_class/parameters/path
+    chmod 666 /sys/module/shub_core/parameters/gryo_firms
+    chmod 666 /sys/module/shub_core/parameters/acc_firms
+    chmod 666 /sys/module/shub_core/parameters/mag_firms
+    chmod 666 /sys/module/shub_core/parameters/light_firms
+    chmod 666 /sys/module/shub_core/parameters/prox_firms
+    chmod 666 /sys/module/shub_core/parameters/pressure_firms
+    chmod 666 /sys/module/shub_core/parameters/sensor_fusion_mode
+    chown system root /sys/class/sprd_sensorhub/sensor_hub/op_download
+    chown system root /sys/class/sprd_sensorhub/sensor_hub/iio
+    chown system root /sys/class/sprd_sensorhub/sensor_hub/iio/trigger/current_trigger
+    chown system root /sys/bus/iio/devices/trigger0/name
+    chmod 660 /sys/class/sprd_sensorhub/sensor_hub/op_download
+    chmod 660 /sys/class/sprd_sensorhub/sensor_hub/iio
+    chmod 660 /sys/class/sprd_sensorhub/sensor_hub/iio/trigger/current_trigger
+    chmod 660 /sys/bus/iio/devices/trigger0/name
+
+    chown system root /sys/class/sprd_sensorhub/sensor_hub/batch
+    chown system root /sys/class/sprd_sensorhub/sensor_hub/logctl
+    chown system root /sys/class/sprd_sensorhub/sensor_hub/calibrator_cmd
+    chown system root /sys/class/sprd_sensorhub/sensor_hub/calibrator_data
+    chown system root /sys/class/sprd_sensorhub/sensor_hub/enable
+    chown system root /sys/class/sprd_sensorhub/sensor_hub/flush
+    chown system root /sys/class/sprd_sensorhub/sensor_hub/version
+    chown system root /sys/class/sprd_sensorhub/sensor_hub/mag_cali_flag
+    chown system root /sys/class/sprd_sensorhub/sensor_hub/sensorhub
+    chown system root /sys/class/sprd_sensorhub/sensor_hub/raw_data_als
+    chown system root /sys/class/sprd_sensorhub/sensor_hub/raw_data_ps
+    chown system root /sys/class/sprd_sensorhub/sensor_hub/light_sensor_calibrator
+    chmod 660 /sys/class/sprd_sensorhub/sensor_hub/batch
+    chmod 660 /sys/class/sprd_sensorhub/sensor_hub/logctl
+    chmod 660 /sys/class/sprd_sensorhub/sensor_hub/calibrator_cmd
+    chmod 660 /sys/class/sprd_sensorhub/sensor_hub/calibrator_data
+    chmod 660 /sys/class/sprd_sensorhub/sensor_hub/enable
+    chmod 660 /sys/class/sprd_sensorhub/sensor_hub/flush
+    chmod 660 /sys/class/sprd_sensorhub/sensor_hub/version
+    chmod 660 /sys/class/sprd_sensorhub/sensor_hub/mag_cali_flag
+    chmod 660 /sys/class/sprd_sensorhub/sensor_hub/sensorhub
+    chmod 660 /sys/class/sprd_sensorhub/sensor_hub/raw_data_als
+    chmod 660 /sys/class/sprd_sensorhub/sensor_hub/raw_data_ps
+    chmod 660 /sys/class/sprd_sensorhub/sensor_hub/light_sensor_calibrator
+    mkdir /mnt/vendor/sensorhub 0777 system root
+    mkdir /mnt/vendor/productinfo 0771 system root
+    mkdir /mnt/vendor/productinfo/sensor_calibration_data 0770 system root
+#support sensorhub factorytest end
+    chown system root /sys/bus/iio/devices/iio:device1/buffer
+    chown system root /sys/bus/iio/devices/iio:device1/buffer/length
+    chown system root /sys/bus/iio/devices/iio:device1/buffer/enable
+    chown system root /sys/bus/iio/devices/iio:device1/trigger/current_trigger
+    chmod 660 /sys/bus/iio/devices/iio:device1/buffer/length
+    chmod 660 /sys/bus/iio/devices/iio:device1/buffer/enable
+    chmod 660 /sys/bus/iio/devices/iio:device1/trigger/current_trigger
+    chown system root /dev/iio:device1
+    chown system root /mnt/vendor
+    chmod 0775 /mnt/vendor
+
+    chmod 0771 /data
+
+    mkdir /data/vendor 0751 root root
+    mkdir /data/vendor/local 0751 root root
+    mkdir /data/vendor/local/media 0770 audioserver system
+
+    mkdir /data/vendor/local/mlogservice 0770 shell system
+
+    chmod 0660 /sys/power/wakeup_count
+
+on cali-start
+    class_start cali
+    insmod ${ro.vendor.ko.mount.point}/socko/pvrsrvkm.ko
+    insmod ${ro.vendor.ko.mount.point}/socko/elan_ts_i2c.ko
+    start vendor.audio-hal-2-0
+    start vendor.engpcclientlte
+    start vendor.modem_control
+    start vendor.refnotify
+    start vendor.sensors-hal-1-0
+    start console

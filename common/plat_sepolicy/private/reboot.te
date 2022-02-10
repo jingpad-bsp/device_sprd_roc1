@@ -1,0 +1,2 @@
+typeattribute reboot coredomain;
+domain_auto_trans(kernel, reboot_exec, reboot)

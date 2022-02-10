@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modem_info>
+	<product val="orca"/>
+	<modem_name val="cp"/>
+	<partion_cnt val="17"/>
+	<ioctl_path val="dev/modem"/>
+	<src_path val="/dev/block/platform/soc/soc:ap-apb/71400000.sdio/by-name/"/>
+	<modem_range base="0x88000000" size="0x15000000"/>
+	<all_range base="0x80000000" size="0x20000000"/>
+	<!--dst_path val="/proc/cptl/"/-->
+	<!-- special: bit0 sec,  bit1 nv, bit2 boot iram, bit3 cmdline;
+	     miniap: bit4 spl,  bit5 sml, bit6 uboot, bit7 boot;
+	     modem: bit8 modem head, bit9 modem, bit10 mode dsp, bit11 other modem
+	     pmsys:  bit12 pm, bit13 pm cali
+	     audio:  bit16 adsp
+	     bit 31 clear -->
+	<partion_item>
+		<partition00 base="0x28007000" size="0x00010000" name="spl"       src_file="nr_spl"        dst_file="spl"       flag="0x00000010"/>
+		<partition01 base="0x852ffe00" size="0x00100000" name="sml"       src_file="nr_sml"        dst_file="sml"       flag="0x00000020"/>
+		<partition02 base="0x9efffe00" size="0x00100000" name="uboot"     src_file="nr_uboot"      dst_file="uboot"     flag="0x00000040"/>
+		<partition03 base="0x82100000" size="0x01400000" name="boot"       src_file="nr_boot"       dst_file="boot"      flag="0x00000080"/>
+		<partition04 base="0x88000000" size="0x0001000" name="modem_head" src_file="nr_modem"      dst_file="modem"     flag="0x00000100"/>
+		<partition05 base="0x88001000" size="0x0001000" name="v3phy_head" src_file="nr_v3phy"      dst_file="wtlphy"    flag="0x00000100"/>
+		<partition06 base="0x88002000" size="0x0001000" name="nrphy_head" src_file="nr_nrphy"      dst_file="nrphy1"    flag="0x00000100"/>
+		<partition07 base="0x8d400000" size="0x0f00000" name="modem"      src_file="nr_modem"      dst_file="modem"     flag="0x00000201"/>
+		<partition08 base="0x9b000000" size="0x0500000" name="v3phy"      src_file="nr_v3phy"      dst_file="wtlphy"    flag="0x00000401"/>
+		<partition09 base="0x94200000" size="0x0500000" name="nrphy"      src_file="nr_nrphy"      dst_file="nrphy1"    flag="0x00000401"/>
+		<partition10 base="0x94d80000" size="0x00500000" name="nrdsp1"    src_file="nr_nrdsp1"     dst_file="nrdsp1"    flag="0x00000401"/>
+		<partition11 base="0x94e00000" size="0x00500000" name="nrdsp2"    src_file="nr_nrdsp2"     dst_file="nrdsp2"    flag="0x00000401"/>
+		<partition12 base="0x86e00000" size="0x00600000" name="agdsp"     src_file="nr_agdsp"      dst_file="agdsp"     flag="0x00010000"/>
+		<partition13 base="0x8a000000" size="0x00700000" name="fixnv"     src_file="nr_fixnv"      dst_file="fixnv"     flag="0x00000802"/>
+		<partition14 base="0x8a700000" size="0x00900000" name="runnv"     src_file="nr_runtimenv"  dst_file="runnv"     flag="0x00000802"/>
+		<partition15 base="0x8e2c0000" size="0x00010000" name="cpcmdline" src_file="cmdline"       dst_file="cpcmdline" flag="0x00000808"/>
+		<partition16 base="0x90000000" size="0x00100000" name="deltanv"   src_file="nr_deltanv"    dst_file="deltanv"   flag="0x00000200"/>
+		<!--partition17 base="0x0000a400" size="0x00000100" name="boot-code" src_file="NULL"          dst_file="boot_code" flag="0x00000804"/-->
+	</partion_item>
+</modem_info>

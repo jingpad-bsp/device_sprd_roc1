@@ -1,0 +1,2 @@
+allow install_recovery mmcblk_device:blk_file rw_file_perms;
+allow install_recovery ufsblk_device:blk_file rw_file_perms;

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string-array name="config_globalActionsList" translatable="false">
+        <item>power</item>
+        <item>restart</item>
+    </string-array>
+</resources>

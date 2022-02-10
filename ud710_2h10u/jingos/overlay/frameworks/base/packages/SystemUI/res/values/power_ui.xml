@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="global_actions_grid_item_width2">141dp</dimen>
+    <dimen name="global_actions_grid_item_height2">141dp</dimen>
+    <dimen name="global_actions_grid_item_icon_width2">141dp</dimen>
+    <dimen name="global_actions_grid_item_icon_height2">141dp</dimen>
+    <color name="global_actions_text">#FFFFFFFF</color>
+
+</resources>

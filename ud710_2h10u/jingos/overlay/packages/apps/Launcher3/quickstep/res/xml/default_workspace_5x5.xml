@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
+
+    <appwidget launcher:className="com.android.alarmclock.DigitalAppWidgetProvider" launcher:packageName="com.android.deskclock" launcher:screen="0" launcher:spanX="2" launcher:spanY="1" launcher:x="0" launcher:y="1" />
+
+    <!--        <appwidget-->
+    <!-- launcher:className="com.asa.jingnote.ui.widget.JnAppWidget"-->
+    <!-- launcher:packageName="com.asa.jingnote"-->
+    <!-- launcher:screen="0"-->
+    <!-- launcher:spanX="6"-->
+    <!-- launcher:spanY="3"-->
+    <!-- launcher:x="0"-->
+    <!-- launcher:y="1" />-->
+    <!--    <appwidget launcher:className="com.asa.jingnote.ui.widget.JnAppWidget" launcher:packageName="com.asa.jingnote" launcher:screen="0" launcher:spanX="7" launcher:spanY="5" launcher:x="0" launcher:y="0"/>-->
+
+    <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
+
+
+    <resolve launcher:container="-101" launcher:screen="0" launcher:x="0" launcher:y="0">
+        <favorite launcher:packageName="com.android.deskclock" launcher:className="com.android.deskclock.DeskClock"/>
+    </resolve>
+    <resolve launcher:container="-101" launcher:screen="1" launcher:x="1" launcher:y="0">
+        <favorite launcher:packageName="com.android.gallery3d" launcher:className="com.android.gallery3d.v2.app.GalleryActivity2"/>
+    </resolve>
+    <resolve launcher:container="-101" launcher:screen="2" launcher:x="2" launcher:y="0">
+        <favorite launcher:packageName="com.tencent.mm" launcher:className="com.tencent.mm.ui.LauncherUI"/>
+    </resolve>
+    <resolve launcher:container="-101" launcher:screen="3" launcher:x="3" launcher:y="0">
+        <favorite launcher:packageName="com.android.settings" launcher:className="com.android.settings.Settings"/>
+    </resolve>
+    <resolve launcher:container="-101" launcher:screen="4" launcher:x="4" launcher:y="0">
+        <favorite launcher:packageName="com.android.camera2" launcher:className="com.android.camera.CameraLauncher"/>
+    </resolve>
+    <resolve launcher:container="-100" launcher:screen="0" launcher:x="0" launcher:y="3">
+        <favorite launcher:packageName="com.android.documentsui" launcher:className="com.android.documentsui.LauncherActivity"/>
+    </resolve>
+    <resolve launcher:container="-100" launcher:screen="0" launcher:x="1" launcher:y="3">
+        <favorite launcher:packageName="com.yozo.office" launcher:className="com.yozo.office.MainAppActivity"/>
+    </resolve>
+    <resolve launcher:container="-100" launcher:screen="0" launcher:x="2" launcher:y="3">
+        <favorite launcher:packageName="com.asa.jingnote" launcher:className="com.asa.jingnote.MainActivity"/>
+    </resolve>
+    <resolve launcher:container="-100" launcher:screen="0" launcher:x="3" launcher:y="3">
+        <favorite launcher:packageName="com.android.calendar" launcher:className="com.android.calendar.AllInOneActivity"/>
+    </resolve>
+    <resolve launcher:container="-100" launcher:screen="0" launcher:x="4" launcher:y="3">
+        <favorite launcher:packageName="com.jingtech.hdbrowser.stable" launcher:className="com.google.android.apps.chrome.Main"/>
+    </resolve>
+    <resolve launcher:container="-100" launcher:screen="0" launcher:x="5" launcher:y="3">
+        <favorite launcher:packageName="com.jn.center" launcher:className="com.jn.center.MainActivity"/>
+    </resolve>
+    <resolve launcher:container="-100" launcher:screen="0" launcher:x="0" launcher:y="4">
+        <favorite launcher:packageName="com.android.dialer" launcher:className="com.android.dialer.main.impl.MainActivity"/>
+    </resolve>
+    <resolve launcher:container="-100" launcher:screen="0" launcher:x="1" launcher:y="4">
+        <favorite launcher:packageName="com.android.soundrecorder" launcher:className="com.sprd.soundrecorder.RecorderActivity"/>
+    </resolve>
+    <resolve launcher:container="-100" launcher:screen="0" launcher:x="2" launcher:y="4">
+        <favorite launcher:packageName="com.android.calculator2" launcher:className="com.android.calculator2.Calculator"/>
+    </resolve>
+    <resolve launcher:container="-100" launcher:screen="0" launcher:x="3" launcher:y="4">
+        <favorite launcher:packageName="com.ss.android.article.news" launcher:className="com.ss.android.article.news.activity.MainActivity"/>
+    </resolve>
+    <resolve launcher:container="-100" launcher:screen="0" launcher:x="4" launcher:y="4">
+        <favorite launcher:packageName="com.tencent.qqlivepad" launcher:className="com.tencent.qqlive.ona.activity.WelcomeActivity"/>
+    </resolve>
+    <resolve launcher:container="-100" launcher:screen="0" launcher:x="5" launcher:y="4">
+        <favorite launcher:packageName="com.android.music" launcher:className="com.android.music.MusicBrowserActivity"/>
+    </resolve>
+    <resolve launcher:container="-100" launcher:screen="1" launcher:x="0" launcher:y="0">
+        <favorite launcher:packageName="com.android.contacts" launcher:className="com.android.contacts.activities.PeopleActivity"/>
+    </resolve>
+    <resolve launcher:container="-100" launcher:screen="1" launcher:x="1" launcher:y="0">
+        <favorite launcher:packageName="com.android.messaging" launcher:className="com.android.messaging.ui.conversationlist.ConversationListActivity"/>
+    </resolve>
+
+
+</favorites>

@@ -1,0 +1,1 @@
+allow ylog_lite mmc_ylog_file:dir { search };

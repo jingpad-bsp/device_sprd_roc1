@@ -1,0 +1,21 @@
+type nhMonitorService, domain, mlstrustedsubject;
+type nhMonitorService_exec, exec_type,file_type, system_file_type;
+
+typeattribute nhMonitorService coredomain;
+init_daemon_domain(nhMonitorService)
+
+allow nhMonitorService property_socket:sock_file write;
+allow nhMonitorService init:unix_stream_socket connectto;
+allow nhMonitorService ctl_start_prop:property_service  { set };
+
+get_prop(nhMonitorService, vendor_nhmonitor_prop);
+allow nhMonitorService storage_file:dir  r_dir_perms ;
+allow nhMonitorService storage_file:file  r_file_perms ;
+allow nhMonitorService sdcardfs:dir  search ;
+allow nhMonitorService sdcardfs:file  {getattr read open} ;
+allow nhMonitorService vfat:dir  search ;
+allow nhMonitorService vfat:file  {getattr read open} ;
+allow nhMonitorService debug_prop:property_service set ;
+
+
+

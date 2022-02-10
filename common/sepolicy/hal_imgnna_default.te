@@ -1,0 +1,17 @@
+type hal_imgnna_default, domain;
+type hal_imgnna_default_exec, exec_type, vendor_file_type, file_type;
+
+typeattribute hal_imgnna_default hal_neuralnetworks_server;
+typeattribute hal_imgnna_default halserverdomain;
+typeattribute hal_imgnna_default hal_neuralnetworks;
+
+init_daemon_domain(hal_imgnna_default);
+
+hal_client_domain(hal_imgnna_default, hal_allocator)
+
+allow hal_imgnna_default imgnna_device:chr_file { read write open ioctl map };
+
+allow hal_imgnna_default hwservicemanager_prop:file { read open getattr map};
+allow hal_imgnna_default hidl_base_hwservice:hwservice_manager { add };
+allow hal_imgnna_default hwservicemanager:binder { call transfer };
+allow hal_imgnna_default hal_neuralnetworks_hwservice:hwservice_manager { add };

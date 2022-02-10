@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="qs_tile_height">88dp</dimen>
+    <dimen name="qs_tile_margin_vertical">8dp</dimen>
+    <dimen name="qs_tile_margin_horizontal">0dp</dimen>
+    <dimen name="qs_tile_margin_top">8dp</dimen>
+    <dimen name="qs_tile_layout_margin_side">20dp</dimen>
+    <dimen name="qs_tile_text_size">10sp</dimen>
+
+</resources>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">鲸鲮中心</string>
+    <string name="jing_welcome">欢迎使用</string>
+    <string name="jing_page1_name">JingPad 5G 智能移动办公终端</string>
+    <string name="jing_page2_name">鲸鲮手写</string>
+    <string name="jing_page2_desc">原笔迹手写，一笔成型。笔记、绘图方便快捷</string>
+    <string name="jing_page3_name">备忘录</string>
+    <string name="jing_page3_desc">随时备忘，键盘、手写、语音，随心切换</string>
+    <string name="jing_page4_name">全功能Office软件</string>
+    <string name="jing_page4_desc">鲸鲮Office，Word、Excel、PPT，随时查阅、编辑各类文档</string>
+    <string name="jing_page5_name">手写笔和键盘随意切换</string>
+    <string name="jing_page5_desc">想写就写，想敲就敲，根据使用场景自由切换</string>
+    <string name="jing_page5z_name">鲸鲮智译</string>
+    <string name="jing_page5z_desc">在线视频会议，真正实现多语种实时翻译，让沟通无障碍，零距离</string>
+    <string name="jing_page6_name">全功能灵动键盘</string>
+    <string name="jing_page6_desc">6行全功能键盘+TouchPad，让办公更高效。系统快捷键，让操作更快更轻松</string>
+    <string name="jing_page7_name">开始使用JingPad</string>
+    <string name="jing_page7_desc">更多信息请查阅官网www.jingpad.cn\n客服电话400-0345-999</string>
+</resources>

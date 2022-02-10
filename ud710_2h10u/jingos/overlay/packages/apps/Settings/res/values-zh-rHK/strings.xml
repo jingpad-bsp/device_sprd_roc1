@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="firmware_version">"系統版本"</string>
+    <string name="storage_detail_dialog_system">"「系統」包含用來執行系統的檔案"</string>
+</resources>

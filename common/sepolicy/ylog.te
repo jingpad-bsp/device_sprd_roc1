@@ -1,0 +1,3 @@
+allow ylog loop_device:blk_file { getattr };
+allow ylog metadata_block_device:blk_file { getattr };
+allow ylog prod_file:dir { search };

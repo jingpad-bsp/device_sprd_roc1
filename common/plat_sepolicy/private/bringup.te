@@ -1,0 +1,10 @@
+allow aprd system_suspend:dir { search };
+allow aprd system_suspend:file { open };
+allow aprd system_suspend:file { getattr };
+
+allow aprd vndservicemanager:file { getattr };
+allow aprd storaged:file { read };
+allow aprd storaged:dir { search };
+#allow sprd_radio_app ashmem_device_service:service_manager { find };
+allow aprd storaged:file { open };
+allow aprd storaged:file { getattr };

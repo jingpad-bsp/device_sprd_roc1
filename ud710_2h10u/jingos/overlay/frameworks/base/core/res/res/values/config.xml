@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="config_icon_mask" translatable="false">"M14,0L86,0A14,14 0,0 1,100 14L100,86A14,14 0,0 1,86 100L14,100A14,14 0,0 1,0 86L0,14A14,14 0,0 1,14 0z"</string>
+</resources>

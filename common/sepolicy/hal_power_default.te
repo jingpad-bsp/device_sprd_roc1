@@ -1,0 +1,28 @@
+#============= hal_power_default ============== 2017-08-02-13-24-29 added by genSepolicy script
+# Board Common Bgn
+allow hal_power_default cgroup:dir search;
+allow hal_power_default cgroup:file { read write open};
+allow hal_power_default self:capability sys_admin;
+allow hal_power_default self:capability net_admin;
+
+allow hal_power_default power_device:chr_file { open read write };
+
+allow hal_power_default proc:file { read write open };
+allow hal_power_default proc_net:file { read write open };
+
+allow hal_power_default sysfs:file { read open write };
+allow hal_power_default sysfs_devices_system_cpu:file { write open write };
+allow hal_power_default sysfs_net:dir search;
+allow hal_power_default sysfs_net:file { read write open };
+allow hal_power_default sysfs_ddr_dfs:dir search;
+allow hal_power_default sysfs_ddr_dfs:file { open read write };
+
+allow hal_power_default hal_health_hwservice:hwservice_manager find;
+
+hal_server_domain(hal_power_default, hal_wifi)
+hal_client_domain(hal_power_default, hal_health)
+
+binder_call(hal_power_default, hal_health_default)
+binder_call(hal_health_default, hal_power_default)
+
+set_prop(hal_power_default, vendor_power_prop);

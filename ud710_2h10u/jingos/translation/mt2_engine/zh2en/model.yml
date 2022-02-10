@@ -1,0 +1,36 @@
+source-language: zh
+target-language: en
+
+n-best: yes
+return-nbest: no
+logs-daily-save: no
+normalize: yes
+
+# Paths are relative to config file location
+relative-paths: yes
+
+# performance settings
+beam-size: 2
+devices: [0]
+threads-per-device: 1
+decoder-timeout: 80
+
+# scorer configuration
+scorers:
+  F0:
+    path: s.model.bin
+    type: t2t
+
+weights:
+  F0: 1
+
+source-vocab: vocab.zh.txt
+target-vocab: vocab.en.txt
+
+batch-delay: 50
+alpha: 0.95
+beta: 0.4
+
+use-bpe: no
+bpe_path: zh.bpe
+assets_path: debian

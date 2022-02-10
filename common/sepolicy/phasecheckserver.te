@@ -1,0 +1,2 @@
+allow phasecheckserver ufsblk_device:blk_file { read write getattr open ioctl };
+allow phasecheckserver proc_cpudebug:file { open read write};
