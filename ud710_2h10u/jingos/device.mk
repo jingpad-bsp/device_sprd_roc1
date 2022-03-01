@@ -4,12 +4,12 @@ include ${CURDIR}/bootanimation/bootanimation.mk
 
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural_wide_back \
-persist.sys.language=zh \
-persist.sys.country=CN \
-persist.sys.timezone=Asia/Shanghai \
-persist.sys.locale=zh-Hans-CN \
-ro.product.locale.language=zh \
-ro.product.locale.region=CN
+persist.sys.language=en \
+persist.sys.country=US \
+persist.sys.timezone=US/Eastern \
+persist.sys.locale=en-US \
+ro.product.locale.language=en \
+ro.product.locale.region=US
 
 
 PRODUCT_PACKAGES += \
@@ -31,7 +31,3 @@ include ${CURDIR}/apps/preinstall/device.mk
 include ${CURDIR}/apps/postinstall/device.mk
 include ${CURDIR}/ota.mk
 include ${CURDIR}/translation/device.mk
-
-
-
-
